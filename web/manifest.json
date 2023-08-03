@@ -1,6 +1,6 @@
 {
-    "name": "sky",
-    "short_name": "sky",
+    "name": "Skyscrapers",
+    "short_name": "Skyscrapers",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#063970",

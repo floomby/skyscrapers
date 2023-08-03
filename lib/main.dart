@@ -11,7 +11,6 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     HomePage homePage = const HomePage();
@@ -92,7 +91,6 @@ class _HomePageState extends State<HomePage> {
   }
 
   void markPuzzleAsComplete(int index) {
-    // print out for debugging purposes
     setState(() {
       _completedPuzzles.add(index);
     });
@@ -279,8 +277,8 @@ class _GamePageState extends State<GamePage> {
         _columnsValid[i] = columnValid;
       });
     }
-    // if everything is non-zero and valid, then the game is completed
 
+    // if everything is non-zero and valid, then the game is completed
     setState(() {
       _completed = _grid.every((row) => row.every((cell) => cell != 0)) &&
           _rowsValid.every((valid) => valid) &&
@@ -288,8 +286,8 @@ class _GamePageState extends State<GamePage> {
 
       if (_completed) {
         Future.delayed(Duration.zero, () {
-          widget.onComplete();
           // mark the puzzle as completed
+          widget.onComplete();
           showDialog(
             context: context,
             builder: (context) {
